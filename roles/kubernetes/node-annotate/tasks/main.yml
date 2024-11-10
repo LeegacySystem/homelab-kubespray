@@ -41,7 +41,7 @@
     msg: "Inventory Node Annotations: {{ inventory_node_annotations }}"
 
 - name: Set annotation on node
-  command: >-
+  shell: >-
     {{ kubectl }} annotate node {% if kube_override_hostname %}{{ kube_override_hostname }}{% else %}{{ inventory_hostname }}{% endif %} {{ item.key }}="{{ item.value }}" --overwrite=true
   loop: "{{ role_node_annotations + inventory_node_annotations }}"
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
