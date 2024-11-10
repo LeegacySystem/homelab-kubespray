@@ -55,6 +55,7 @@
     - { role: kubernetes/control-plane, tags: master, upgrade_cluster_setup: true }
     - { role: kubernetes/client, tags: client }
     - { role: kubernetes/node-label, tags: node-label }
+    - { role: kubernetes/node-annotate, tags: node-annotate }
     - { role: kubernetes/node-taint, tags: node-taint }
     - { role: kubernetes-apps/cluster_roles, tags: cluster-roles }
     - { role: kubernetes-apps, tags: csi-driver }
@@ -88,6 +89,7 @@
     - { role: kubernetes/node, tags: node }
     - { role: kubernetes/kubeadm, tags: kubeadm }
     - { role: kubernetes/node-label, tags: node-label }
+    - { role: kubernetes/node-annotate, tags: node-annotate }
     - { role: kubernetes/node-taint, tags: node-taint }
     - { role: upgrade/post-upgrade, tags: post-upgrade }
 
